@@ -40,18 +40,21 @@
         $rl_data[] = $cur_row;
     }
     mysql_close($con);
-    echo 'rl_data';
-    print_r($rl_data);
+
+    // 測試特殊字元的輸入
     $rl_data['special character test'] = "\t\r\n";
-    echo 'this is data'."\n";
-    print_r($rl_data);
-    echo 'this is json_encode'."\n";
     $js_data = json_encode($rl_data);
     // 預防 json data 中包含換行.tab
     $js_data = special_character_process($js_data);
+    $rjs_data = json_decode($js_data);
+
+    echo 'rl_data';
+    print_r($rl_data);
+    echo 'this is data'."\n";
+    print_r($rl_data);
+    echo 'this is json_encode'."\n";
     echo $js_data;
     echo 'this is json_decode'."\n";
-    $rjs_data = json_decode($js_data);
     print_r($rjs_data);
     // php5 sample end
 
