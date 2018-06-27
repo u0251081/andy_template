@@ -42,8 +42,34 @@
     mysql_close($con);
     echo 'rl_data';
     print_r($rl_data);
+    $rl_data['special character test'] = "\t\r\n";
+    echo 'this is data'."\n";
+    print_r($rl_data);
+    echo 'this is json_encode'."\n";
+    $js_data = json_encode($rl_data);
+    // 預防 json data 中包含換行.tab
+    $js_data = special_character_process($js_data);
+    echo $js_data;
+    echo 'this is json_decode'."\n";
+    $rjs_data = json_decode($js_data);
+    print_r($rjs_data);
+    // php5 sample end
 
+    // 把 \n \r \t \v 等字元換成 \\n \\r \\t \\v
+    function special_character_process($str) {
+        $rst_str = '';
+        $pattern = '/(\\\\[nrtv])/';
+        $replacement = '\\\\$1';
+        $subject = $str;
+        $rst_str .= preg_replace("$pattern","$replacement","$subject");
+        return $rst_str;
+    }
+
+    // mysql_close($con);
+
+    // phpinfo();
 ?>
 
 <script>
+    var json_receiver = JSON.parse('<?=$js_data?>');
 </script>
