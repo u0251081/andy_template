@@ -23,6 +23,8 @@
     // php7 sample end
     */
 
+    // phpinfo();
+
     // php5 sample start
     $con = mysql_connect($servername,$username,$password);
     // $con = true;
