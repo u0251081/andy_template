@@ -107,20 +107,31 @@ print 'remove data';
 print $db->exec('delete from some_data where id = "02469753";');
 print "\n";
 print '</textarea>';
-/*一般使用fetchColumn()來進行count統計或者某些只需要單字段的記錄很好操作。
-
-　　簡單的總結一下上面的操作:
-
-　　查詢操作主要是PDO::query()、PDO::exec()、PDO::prepare()。PDO::query()主要是用於有記錄 結果返回的操作
-，特別是SELECT操作，PDO::exec()主要是針對沒有結果集合返回的操作，
-比如INSERT、UPDATE、DELETE等操 作，它返回的結果是當前操作影響的列數。
-
-PDO::prepare()主要是預處理操作，需要通過$rs-＞execute()來執行預處理裡面的SQL 語句，這個方法可以綁定參數，功能比較強大，不是本文能夠簡單說明白的，大家可以參考手冊和其他文檔。
-獲取結果集操作主要是：PDOStatement::fetchColumn()、PDOStatement::fetch()、 PDOStatement::fetchALL()。PDOStatement::fetchColumn() 是獲取結果指定第一條記錄的某個字段，缺省是第一個字段。
-PDOStatement::fetch() 是用來獲取一條記錄，PDOStatement::fetchAll()是獲取所有記錄集到一個中，獲取結果可以通過PDOStatement:: setFetchMode來設置需要結果集合的類型。
-
-　　另外有兩個周邊的操作，一個是PDO::lastInsertId()和PDOStatement::rowCount()。PDO:: lastInsertId()是返回上次插入操作，主鍵列類型是自動新增的最後的流水號ID。
-
-PDOStatement::rowCount()主要是用於 PDO::query()和PDO::prepare()進行DELETE、INSERT、UPDATE操作影響的結果集，對PDO::exec()方法 和SELECT操作無效。
-*/
+/*
+ * 一般使用fetchColumn()來進行count統計或者某些只需要單字段的記錄很好操作。
+ *
+ * 簡單的總結一下上面的操作:
+ *
+ * 查詢操作主要是PDO::query()、PDO::exec()、PDO::prepare()。
+ * PDO::query()主要是用於有記錄 結果返回的操作，特別是SELECT操作，
+ * PDO::exec()主要是針對沒有結果集合返回的操作，比如INSERT、UPDATE、DELETE等操作，
+ * 它返回的結果是當前操作影響的列數。
+ *
+ * PDO::prepare()主要是預處理操作，需要通過$rs-＞execute()來執行預處理裡面的SQL 語句，
+ * 這個方法可以綁定參數，功能比較強大，不是本文能夠簡單說明白的，大家可以參考手冊和其他文檔。
+ *
+ * 獲取結果集操作主要是：PDOStatement::fetchColumn()、PDOStatement::fetch()、 PDOStatement::fetchALL()。
+ * PDOStatement::fetchColumn() 是獲取結果指定第一條記錄的某個字段，缺省是第一個字段。
+ * PDOStatement::fetch() 是用來獲取一條記錄，
+ * PDOStatement::fetchAll()是獲取所有記錄集到一個中，
+ * 獲取結果可以通過PDOStatement:: setFetchMode來設置需要結果集合的類型。
+ *
+ * 另外有兩個周邊的操作，一個是PDO::lastInsertId()和PDOStatement::rowCount()。
+ * PDO:: lastInsertId()是返回上次插入操作，主鍵列類型是自動新增的最後的流水號ID。
+ *
+ * PDOStatement::rowCount()主要是用於 PDO::query()和PDO::prepare()進行DELETE、INSERT、UPDATE操作影響的結果集，
+ * 對PDO::exec()方法 和SELECT操作無效。
+ *
+ *
+ */
 ?>
