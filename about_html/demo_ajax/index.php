@@ -20,7 +20,7 @@ $str = '';
     <div id="formTop"></div>
     <div id="formContent">
         <div class="inputGroup">
-            <input type="text" name="index" style="width: 180px;" placeholder="input a value for cookie index">
+            <input type="text" name="index" style="width: 180px;" placeholder="input a value for ajax index">
             <input type="text" name="value" style="width: 200px;" placeholder="a value for index specify value">
             <br>
         </div>
