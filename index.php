@@ -1,5 +1,26 @@
 <?php
-//    echo 'hello world';
+
+function GET($index = false, $default = '')
+{
+    if (gettype($index) === 'string') {
+        return (isset($_GET[$index])) ? $_GET[$index] : $default;
+    }
+    if ($index === false) {
+        return $_GET;
+    }
+    return false;
+}
+
+function POST($index = false, $default = '')
+{
+    if (gettype($index) === 'string') {
+        return (isset($_POST[$index])) ? $_POST[$index] : $default;
+    }
+    if ($index === false) {
+        return $_POST;
+    }
+    return false;
+}
 ?>
 <link rel="icon" href="/andy/favicon.ico">
 <div style="display:flex;flex-direction:column;">

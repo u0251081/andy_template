@@ -52,27 +52,6 @@ $str = '';
         document.getElementById('formContent').append(newGroup);
     }
 
-    function sendForm() {
-        $.ajax({
-            url: 'service.php',
-            method: 'post',
-            data: getFormValue(),
-            success: function(response) {
-                refreshResult(response);
-                try {
-                    let data = JSON.parse(response);
-                    refreshResult('\n');
-                    refreshResult(objToStr(data));
-                    if (typeof data.javascript !== 'undefined') {
-                        eval(data.javascript);
-                    }
-                } catch (e) {
-                    refreshResult(response);
-                }
-            }
-        });
-    }
-
     function objToStr(object) {
         let myTab = '    ';
         if (typeof object === 'object') {
@@ -92,18 +71,6 @@ $str = '';
         } else {
             return object;
         }
-    }
-
-    function getFormValue() {
-        let outputData = {};
-        $('#formContent').find('input[name="index"]').each(function (ind, ele) {
-            let newName = $(this).val();
-            let newValue = $(this).closest('.inputGroup').find('input[name="value"]').val();
-            console.log(this);
-            outputData[newName] = newValue;
-        });
-        console.log(outputData);
-        return outputData;
     }
 
     function refreshResult(msg) {
