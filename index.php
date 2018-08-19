@@ -1,6 +1,6 @@
 <?php
 
-function GET($index = false, $default = '')
+function GET($index = false, $default = array())
 {
     if (gettype($index) === 'string') {
         return (isset($_GET[$index])) ? $_GET[$index] : $default;
@@ -11,7 +11,7 @@ function GET($index = false, $default = '')
     return false;
 }
 
-function POST($index = false, $default = '')
+function POST($index = false, $default = array())
 {
     if (gettype($index) === 'string') {
         return (isset($_POST[$index])) ? $_POST[$index] : $default;
@@ -21,6 +21,46 @@ function POST($index = false, $default = '')
     }
     return false;
 }
+
+function dynamicClassMethod($class, $method)
+{
+    // check class exists
+    if (class_exists($class)) {
+        // instance object
+        $object = new $class();
+        // check method is exists in class
+        if (method_exists($object, $method)) {
+            $object->$method();
+            return true;
+        }
+    }
+    return false;
+}
+
+function generateFileName()
+{
+    do {
+        $result = generateRandomString();
+    } while (file_exists($result));
+    return $result;
+}
+
+function generateRandomString($source = '', $length = 10, $special = false)
+{
+    if (gettype($source) === 'string') {
+        if ($source === '') $source = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        if ($special === true) $source .= '!@#$%^&*()_+-=/|?><.,"\'\\:;';
+        $tableLength = strlen($source) - 1;
+        $result = '';
+        for ($i = 0; $i < $length; $i++) {
+            $result .= $source[rand(0, $tableLength)];
+        }
+        return $result;
+    } else {
+        return false;
+    }
+}
+
 ?>
 <link rel="icon" href="/andy/favicon.ico">
 <div style="display:flex;flex-direction:column;">
