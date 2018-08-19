@@ -3,7 +3,7 @@
 function GET($index = false, $default = array())
 {
     if (gettype($index) === 'string') {
-        return (isset($_GET[$index])) ? $_GET[$index] : $default;
+        return (isset($_GET[$index])) ? addslashes($_GET[$index]) : $default;
     }
     if ($index === false) {
         return $_GET;
@@ -14,7 +14,7 @@ function GET($index = false, $default = array())
 function POST($index = false, $default = array())
 {
     if (gettype($index) === 'string') {
-        return (isset($_POST[$index])) ? $_POST[$index] : $default;
+        return (isset($_POST[$index])) ? addslashes($_POST[$index]) : $default;
     }
     if ($index === false) {
         return $_POST;
