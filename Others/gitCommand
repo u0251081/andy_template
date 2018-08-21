@@ -1,0 +1,13 @@
+remote rename originName newName
+reset [--(soft|mixed|hard)] (HEAD|hash) [file|empty for all]
+add [file|--all]
+checkout [branch|file] [file|empty for all]
+commit -m "message"
+merge (branch)
+credential-(osxkeychain|wincred) erase
++protocol=https
++host=github.com
++[Press Return]
+fetch remoteName branch[:local branch]
+pull remoteName branch
+push -u remoteName branch
