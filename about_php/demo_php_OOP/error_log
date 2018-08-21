@@ -2,3 +2,11 @@
 [19-Aug-2018 10:33:49 Europe/Berlin] PHP Notice:  Use of undefined constant example_interface1 - assumed 'example_interface1' in D:\xampp564\htdocs\template\about_php\demo_php_OOP\index.php on line 140
 [19-Aug-2018 10:33:49 Europe/Berlin] PHP Notice:  Use of undefined constant example_interface2 - assumed 'example_interface2' in D:\xampp564\htdocs\template\about_php\demo_php_OOP\index.php on line 142
 [19-Aug-2018 10:33:49 Europe/Berlin] PHP Notice:  Use of undefined constant example_abstract - assumed 'example_abstract' in D:\xampp564\htdocs\template\about_php\demo_php_OOP\index.php on line 152
+[19-Aug-2018 16:03:14 Europe/Berlin] PHP Notice:  Use of undefined constant example_abstract - assumed 'example_abstract' in D:\xampp564\htdocs\template\about_php\demo_php_OOP\index.php on line 135
+[19-Aug-2018 16:03:14 Europe/Berlin] PHP Notice:  Use of undefined constant example_interface1 - assumed 'example_interface1' in D:\xampp564\htdocs\template\about_php\demo_php_OOP\index.php on line 140
+[19-Aug-2018 16:03:14 Europe/Berlin] PHP Notice:  Use of undefined constant example_interface2 - assumed 'example_interface2' in D:\xampp564\htdocs\template\about_php\demo_php_OOP\index.php on line 142
+[19-Aug-2018 16:03:14 Europe/Berlin] PHP Notice:  Use of undefined constant example_abstract - assumed 'example_abstract' in D:\xampp564\htdocs\template\about_php\demo_php_OOP\index.php on line 152
+[19-Aug-2018 16:39:00 Europe/Berlin] PHP Notice:  Use of undefined constant example_abstract - assumed 'example_abstract' in D:\xampp564\htdocs\template\about_php\demo_php_OOP\index.php on line 135
+[19-Aug-2018 16:39:00 Europe/Berlin] PHP Notice:  Use of undefined constant example_interface1 - assumed 'example_interface1' in D:\xampp564\htdocs\template\about_php\demo_php_OOP\index.php on line 140
+[19-Aug-2018 16:39:00 Europe/Berlin] PHP Notice:  Use of undefined constant example_interface2 - assumed 'example_interface2' in D:\xampp564\htdocs\template\about_php\demo_php_OOP\index.php on line 142
+[19-Aug-2018 16:39:00 Europe/Berlin] PHP Notice:  Use of undefined constant example_abstract - assumed 'example_abstract' in D:\xampp564\htdocs\template\about_php\demo_php_OOP\index.php on line 152

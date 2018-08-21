@@ -1,2 +1,4 @@
 files for your website should be uploaded here!
 .idea
+DBConfig.php
+error_log

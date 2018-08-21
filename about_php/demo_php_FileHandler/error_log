@@ -7,3 +7,5 @@
 [19-Aug-2018 12:03:50 Europe/Berlin] PHP Warning:  in_array() expects parameter 2 to be array, null given in D:\xampp564\htdocs\template\about_php\demo_php_FileHandler\Service.php on line 34
 [19-Aug-2018 14:52:11 Europe/Berlin] PHP Warning:  The use statement with non-compound name 'test' has no effect in D:\xampp564\htdocs\template\about_php\demo_php_FileHandler\classService.php on line 12
 [19-Aug-2018 15:00:53 Europe/Berlin] PHP Notice:  Undefined variable: something in D:\xampp564\htdocs\template\about_php\demo_php_FileHandler\classService.php on line 52
+[19-Aug-2018 17:06:50 Europe/Berlin] PHP Warning:  fwrite() expects parameter 2 to be string, array given in D:\xampp564\htdocs\template\about_php\demo_php_FileHandler\Service.php on line 55
+[19-Aug-2018 17:06:50 Europe/Berlin] PHP Warning:  fread(): Length parameter must be greater than 0 in D:\xampp564\htdocs\template\about_php\demo_php_FileHandler\Service.php on line 60

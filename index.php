@@ -1,4 +1,4 @@
-
+<meta charset="UTF-8">
 <link rel="icon" href="/andy/favicon.ico">
 <div style="display:flex;flex-direction:column;">
     <a href="about_html/demo_md5">demo_md5</a>
@@ -10,13 +10,10 @@
 </div>
 <textarea id="cli_rst" style="width: 800px; height: 450px;" readonly></textarea>
 <?php
+    require_once 'DBConfig.php';
     $php_info = '';
 	$php_info .= 'hello world'."\\n";
 	$php_info .= 'Trying to connect mysql'."\\n";
-	$hostname = "sql209.byethost15.com";
-    $username = "b15_22349437";
-    $password = "a123932";
-    $database = "b15_22349437_db";
     $servername = $hostname;
 	$php_info .= 'Use Hostname: '.$hostname."\\n";
 	$php_info .= 'Use Username: '.$username."\\n";
@@ -30,10 +27,8 @@
 	$php_info .= 'Use Database: '.$database."\\n";
     mysql_select_db("$database");
 
-    $my_data = mysql_query('status');
-    while( $cur_row = mysql_fetch_array($my_data)) {
-        $rl_data[] = $cur_row;
-    }
+    $my_data = mysql_stat();
+    $php_info .= $my_data;
 
     mysql_close($con);
 
@@ -42,7 +37,7 @@
 ?>
 <script>
     var php_info = '<?=$php_info?>';
-    // document.getElementById('cli_rst').innerText = php_info;
+    document.getElementById('cli_rst').value = php_info;
     $('#cli_rst').text(php_info);
 </script>
 <?php
