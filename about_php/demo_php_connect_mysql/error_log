@@ -1,0 +1,1 @@
+[19-Aug-2018 11:00:16 Europe/Berlin] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in D:\xampp564\htdocs\template\about_php\demo_php_connect_mysql\sample_connect.php on line 40

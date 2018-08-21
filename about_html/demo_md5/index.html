@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Demo md5</title>
+    <!-- This is import jquery -->
+    <script type="text/javascript" src="../../assets/js/jquery-3.3.1.js"></script>
+    <!-- This is import md5 function like md5('string'); -->
+    <script type="text/javascript" src="../../assets/js/md5.js"></script>
+    <!-- This is import md5 function like 'string'.MD5([32]); -->
+    <script type="text/javascript" src="../../assets/js/md5_v2.js"></script>
+</head>
+<body>
+<div style="display:flex;flex-direction:column;">
+    <input id="md5source" type="text" style="width:200px;">
+    <label id="md516result"></label>
+    <label id="md532result"></label>
+</div>
+</body>
+<script>
+    $('input[type="text"]').on('keyup',function(){
+        $('#md516result').text($(this).val().MD5());
+        $('#md532result').text($(this).val().MD5(32));
+    });
+</script>
+</html>

@@ -1,0 +1,9 @@
+[19-Aug-2018 11:42:48 Europe/Berlin] PHP Notice:  Undefined variable: sampleText in D:\xampp564\htdocs\template\about_php\demo_php_FileHandler\index.php on line 40
+[19-Aug-2018 11:42:48 Europe/Berlin] PHP Notice:  Undefined variable: sampleText in D:\xampp564\htdocs\template\about_php\demo_php_FileHandler\index.php on line 45
+[19-Aug-2018 11:56:25 Europe/Berlin] PHP Notice:  Undefined variable: filename in D:\xampp564\htdocs\template\about_php\demo_php_FileHandler\index.php on line 12
+[19-Aug-2018 11:56:25 Europe/Berlin] PHP Warning:  file_get_contents(): Filename cannot be empty in D:\xampp564\htdocs\template\about_php\demo_php_FileHandler\index.php on line 12
+[19-Aug-2018 12:03:01 Europe/Berlin] PHP Warning:  in_array() expects parameter 2 to be array, string given in D:\xampp564\htdocs\template\about_php\demo_php_FileHandler\Service.php on line 34
+[19-Aug-2018 12:03:33 Europe/Berlin] PHP Warning:  in_array() expects parameter 2 to be array, string given in D:\xampp564\htdocs\template\about_php\demo_php_FileHandler\Service.php on line 34
+[19-Aug-2018 12:03:50 Europe/Berlin] PHP Warning:  in_array() expects parameter 2 to be array, null given in D:\xampp564\htdocs\template\about_php\demo_php_FileHandler\Service.php on line 34
+[19-Aug-2018 14:52:11 Europe/Berlin] PHP Warning:  The use statement with non-compound name 'test' has no effect in D:\xampp564\htdocs\template\about_php\demo_php_FileHandler\classService.php on line 12
+[19-Aug-2018 15:00:53 Europe/Berlin] PHP Notice:  Undefined variable: something in D:\xampp564\htdocs\template\about_php\demo_php_FileHandler\classService.php on line 52

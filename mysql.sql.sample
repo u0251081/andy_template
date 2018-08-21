@@ -1,0 +1,9 @@
+-- DROP USER IF EXISTS 'username'@'localhost';
+CREATE USER 'username'@'localhost' IDENTIFIED BY 'password';
+GRANT USAGE ON *.* TO 'username'@'localhost' REQUIRE NONE WITH MAX_QUERIES_PER_HOUR 0 MAX_CONNECTIONS_PER_HOUR 0 MAX_UPDATES_PER_HOUR 0 MAX_USER_CONNECTIONS 0;
+-- drop database if exists `database`;
+-- CREATE DATABASE IF NOT EXISTS `database` DEFAULT CHARACTER SET utf8 collATE utf8_general_ci;
+-- CREATE DATABASE IF NOT EXISTS `DATABASE` default CHARSET utf8 COLLATE utf8_general_ci;
+create database if not exists `datatable` default character set utf8 collate utf8_general_ci;
+GRANT ALL PRIVILEGES ON `datatable`.* TO 'username'@'localhost' WITH GRANT OPTION;
+use `datatable`;
