@@ -1,0 +1,13 @@
+create database `laravel_tutorial_database` character set utf8 collate utf8_general_ci;
+create user `laravel_tutorial_username`@'localhost' identified by 'laravel_tutorial_password';
+grant all privileges on laravel_tutorial_database.* to laravel_tutorial_username@localhost;
+flush privileges; -- 刷新MySQL的系统权限相關的表
+
+-- 建立多個帳號
+create user userone identified by passwordone, usertwo identified by passwordtwo;
+-- 給予全域權限
+grant all privileges on *.* to 'username'@'hostname';
+-- 給予部分區域權限
+grant all privileges on `databases`.* to 'username'@'hostname';
+-- 建立資料庫 並賦予編碼
+create database `databasename` character set utf8 collate utf8_general_ci;
